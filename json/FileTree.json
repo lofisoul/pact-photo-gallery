@@ -1,0 +1,367 @@
+{
+    "status": "success",
+    "data": {
+        "SS23": {
+            "id": "QCLIM",
+            "scheme": "folder",
+            "size": "0"
+        },
+        "SITE": {
+            "id": "KEQKS",
+            "scheme": "folder",
+            "size": "1",
+            "children": {
+                "Product": {
+                    "id": "VPN6R",
+                    "scheme": "folder",
+                    "size": "5",
+                    "children": {
+                        "Kids": {
+                            "id": "Q32PC",
+                            "scheme": "album",
+                            "size": "0"
+                        },
+                        "Baby": {
+                            "id": "TFGJM",
+                            "scheme": "album",
+                            "size": "0"
+                        },
+                        "Home": {
+                            "id": "GO2EH",
+                            "scheme": "album",
+                            "size": "0"
+                        },
+                        "Men": {
+                            "id": "M2NPB",
+                            "scheme": "album",
+                            "size": "75"
+                        },
+                        "Women": {
+                            "id": "PF5K1",
+                            "scheme": "album",
+                            "size": "12"
+                        }
+                    }
+                }
+            }
+        },
+        "India": {
+            "id": "ON99L",
+            "scheme": "folder",
+            "size": "3",
+            "children": {
+                "2022": {
+                    "id": "J98KS",
+                    "scheme": "folder",
+                    "size": "3",
+                    "children": {
+                        "Farm": {
+                            "id": "L57QM",
+                            "scheme": "album",
+                            "size": "10"
+                        },
+                        "Scenery": {
+                            "id": "RHLDS",
+                            "scheme": "album",
+                            "size": "18"
+                        },
+                        "Factories": {
+                            "id": "QI5EV",
+                            "scheme": "folder",
+                            "size": "5",
+                            "children": {
+                                "Fabstract": {
+                                    "id": "T5TQC",
+                                    "scheme": "album",
+                                    "size": "11"
+                                },
+                                "Bestitch": {
+                                    "id": "GEFKR",
+                                    "scheme": "album",
+                                    "size": "49"
+                                },
+                                "Connoisseur": {
+                                    "id": "P5IQB",
+                                    "scheme": "album",
+                                    "size": "21"
+                                },
+                                "Rajlakshmi-Noida (Sweaters)": {
+                                    "id": "SG0L5",
+                                    "scheme": "album",
+                                    "size": "28"
+                                },
+                                "Rajlakshmi-Kolkata": {
+                                    "id": "IQM0C",
+                                    "scheme": "album",
+                                    "size": "7"
+                                }
+                            }
+                        }
+                    }
+                },
+                "2016": {
+                    "id": "HK390",
+                    "scheme": "folder",
+                    "size": "2",
+                    "children": {
+                        "Farms": {
+                            "id": "RUVRF",
+                            "scheme": "album",
+                            "size": "182"
+                        },
+                        "Factories": {
+                            "id": "UBDM5",
+                            "scheme": "album",
+                            "size": "182"
+                        }
+                    }
+                },
+                "2015": {
+                    "id": "SNK9A",
+                    "scheme": "folder",
+                    "size": "3",
+                    "children": {
+                        "Video": {
+                            "id": "SVB30",
+                            "scheme": "album",
+                            "size": "83"
+                        },
+                        "High res": {
+                            "id": "QB2MG",
+                            "scheme": "album",
+                            "size": "27"
+                        },
+                        "Web res": {
+                            "id": "N0GRQ",
+                            "scheme": "album",
+                            "size": "738"
+                        }
+                    }
+                }
+            }
+        },
+        "FW22": {
+            "id": "G55UV",
+            "scheme": "folder",
+            "size": "6",
+            "children": {
+                "Scenery": {
+                    "id": "KU12F",
+                    "scheme": "album",
+                    "size": "12"
+                },
+                "Studio": {
+                    "id": "SEHGJ",
+                    "scheme": "album",
+                    "size": "3906"
+                },
+                "Laydown": {
+                    "id": "IP33Q",
+                    "scheme": "album",
+                    "size": "537"
+                },
+                "Lifestyle": {
+                    "id": "L5GUG",
+                    "scheme": "album",
+                    "size": "554"
+                },
+                "Editorial": {
+                    "id": "RE69E",
+                    "scheme": "album",
+                    "size": "521"
+                },
+                "Macro": {
+                    "id": "UQK44",
+                    "scheme": "album",
+                    "size": "152"
+                }
+            }
+        },
+        "SS22": {
+            "id": "OLMD3",
+            "scheme": "folder",
+            "size": "5",
+            "children": {
+                "Macro": {
+                    "id": "U9UHJ",
+                    "scheme": "album",
+                    "size": "124"
+                },
+                "Editorial": {
+                    "id": "GKCCU",
+                    "scheme": "album",
+                    "size": "496"
+                },
+                "Lifestyle": {
+                    "id": "NUTVK",
+                    "scheme": "album",
+                    "size": "708"
+                },
+                "Laydown": {
+                    "id": "P9JIE",
+                    "scheme": "album",
+                    "size": "465"
+                },
+                "Studio": {
+                    "id": "SK1D8",
+                    "scheme": "album",
+                    "size": "5060"
+                }
+            }
+        },
+        "FW21": {
+            "id": "IPC7K",
+            "scheme": "folder",
+            "size": "7",
+            "children": {
+                "Faceplant": {
+                    "id": "LIRC3",
+                    "scheme": "album",
+                    "size": "16"
+                },
+                "Press": {
+                    "id": "M1HOJ",
+                    "scheme": "album",
+                    "size": "26"
+                },
+                "Lifestyle": {
+                    "id": "H16PE",
+                    "scheme": "album",
+                    "size": "246"
+                },
+                "Macro": {
+                    "id": "KDKK4",
+                    "scheme": "album",
+                    "size": "96"
+                },
+                "Editorial": {
+                    "id": "RM66I",
+                    "scheme": "album",
+                    "size": "242"
+                },
+                "Laydown": {
+                    "id": "T0RPO",
+                    "scheme": "album",
+                    "size": "274"
+                },
+                "Studio": {
+                    "id": "P2CPN",
+                    "scheme": "album",
+                    "size": "3270"
+                }
+            }
+        },
+        "SS21": {
+            "id": "KJ88D",
+            "scheme": "folder",
+            "size": "5",
+            "children": {
+                "SS21 - Lifestyle": {
+                    "id": "UFEE8",
+                    "scheme": "album",
+                    "size": "88"
+                },
+                "SS21 - Macros": {
+                    "id": "HG9FD",
+                    "scheme": "album",
+                    "size": "75"
+                },
+                "SS21 - Editorial": {
+                    "id": "PHJFI",
+                    "scheme": "album",
+                    "size": "303"
+                },
+                "SS21 - Laydown": {
+                    "id": "VS4QS",
+                    "scheme": "album",
+                    "size": "406"
+                },
+                "SS21 - Studio": {
+                    "id": "I6ML7",
+                    "scheme": "album",
+                    "size": "3411"
+                }
+            }
+        },
+        "FW20": {
+            "id": "HU0OQ",
+            "scheme": "folder",
+            "size": "3",
+            "children": {
+                "FW20 - Lifestyle": {
+                    "id": "TEFB5",
+                    "scheme": "album",
+                    "size": "270"
+                },
+                "FW20 - Laydown": {
+                    "id": "LSFOF",
+                    "scheme": "album",
+                    "size": "238"
+                },
+                "FW20 - Studio": {
+                    "id": "UJF5V",
+                    "scheme": "album",
+                    "size": "2426"
+                }
+            }
+        },
+        "Evergreen": {
+            "id": "L4FLJ",
+            "scheme": "album",
+            "size": "1362"
+        },
+        "Social Media": {
+            "id": "G60ME",
+            "scheme": "folder",
+            "size": "2",
+            "children": {
+                "Ads Library": {
+                    "id": "GIT8O",
+                    "scheme": "folder",
+                    "size": "1",
+                    "children": {
+                        "Black Friday 2020 Ads": {
+                            "id": "U6BLH",
+                            "scheme": "album",
+                            "size": "22"
+                        }
+                    }
+                },
+                "UGC - Apex": {
+                    "id": "GFR80",
+                    "scheme": "folder",
+                    "size": "1",
+                    "children": {
+                        "Kids_Baby Images": {
+                            "id": "T55L9",
+                            "scheme": "album",
+                            "size": "69"
+                        }
+                    }
+                }
+            }
+        },
+        "SS20": {
+            "id": "NL9A1",
+            "scheme": "folder",
+            "size": "3",
+            "children": {
+                "SS20 - Laydown Images": {
+                    "id": "NGM14",
+                    "scheme": "album",
+                    "size": "213"
+                },
+                "SS20 - Lifestyle Images": {
+                    "id": "UU64G",
+                    "scheme": "album",
+                    "size": "739"
+                },
+                "SS20 - Studio Images": {
+                    "id": "G8NVB",
+                    "scheme": "album",
+                    "size": "2591"
+                }
+            }
+        }
+    }
+}

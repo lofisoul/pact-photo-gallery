@@ -1,0 +1,17 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+
+    .imageItem {
+        aspect-ratio: 1/1;
+        position: relative;
+        overflow: hidden;
+        border-radius: 5px;
+
+        img {
+            object-fit: cover;
+        }
+    }
+}

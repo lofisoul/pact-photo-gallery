@@ -1,0 +1,25 @@
+.galleryNav {
+> ul {
+        margin: 0;
+        padding:0;
+    }
+}
+.navItem {
+    button {
+        background: none;
+        border:0;
+        padding:0;
+        margin:0;
+        font-weight:800;
+        &[class*="empty"] {
+            color: var(--disabled-gray);
+            font-style:italic;
+        }
+
+        + ul {
+            overflow: hidden;
+            transition: .5s;
+            padding-left: 10px;
+        }
+    }
+}

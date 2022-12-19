@@ -1,0 +1,13 @@
+.main {
+    @media screen and (min-width: 570px) {
+        display: flex;
+
+        > nav {
+            width: 20%
+        }
+
+        > section {
+            width: 80%;
+        }
+    }
+}
