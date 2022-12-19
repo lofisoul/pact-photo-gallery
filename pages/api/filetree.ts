@@ -17,8 +17,7 @@ export default async function handler(
 
   const parseObj = JSON.parse(fileContents);
   const mapped = formatFileTree(parseObj.data);
-  console.log("#####FILE#####");
-  console.log(mapped);
+
   //Return the content of the data file in json format
   res.status(200).json(mapped);
 }

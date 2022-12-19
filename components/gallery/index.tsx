@@ -8,7 +8,7 @@ export function Gallery({ data }) {
         ? `No images`
         : data.map((image) => (
             <div className={styles.imageItem} key={image.id}>
-              <a href="#" key={image.id}>
+              <a href={`images/${image.id}`}>} key={image.id}>
                 <GalleryImage image={image} />
               </a>
             </div>

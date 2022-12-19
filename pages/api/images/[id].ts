@@ -17,7 +17,11 @@ export default async function handler(
   const parseObj = JSON.parse(fileContents);
   const result = parseObj.data.results;
 
+  console.log(req.query);
+
   const image = result.find((img) => img.id === req.query.id);
+
+  console.log("IMAAGE" + image);
 
   //Return the content of the data file in json format
   res.status(200).json(image);
