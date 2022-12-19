@@ -95,7 +95,7 @@ export function ListItem({ item, isAlbum, level, isHome }) {
           {renderButtonContent(active)}
         </button>
       )}
-      {children}
+      {active ? children : ""}
     </li>
   );
 }
