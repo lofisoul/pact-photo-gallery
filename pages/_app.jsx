@@ -1,10 +1,9 @@
 import "../styles/globals.css";
 import { Hanken_Grotesk } from "@next/font/google";
-import type { AppProps } from "next/app";
 
 const hanken = Hanken_Grotesk({ subsets: ["latin"] });
 
-export default function App({ Component, pageProps, appProps }: AppProps) {
+export default function App({ Component, pageProps, appProps }) {
   return (
     <>
       <style jsx global>{`
