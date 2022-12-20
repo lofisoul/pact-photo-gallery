@@ -7,7 +7,7 @@ import {fetcher} from '../../utils/fetcher';
 export default function Results() {
 	const router = useRouter();
 	const query = router.query;
-	console.log(query);
+
 	const {data, error} = useSWR(
 		`api/album/searchresults?keyword=${query.searchTerms}`,
 		fetcher,
@@ -22,9 +22,3 @@ export default function Results() {
 		</Layout>
 	);
 }
-
-// export async function getStaticProps({params}) {
-// 	return {
-// 		props: {album},
-// 	};
-// }

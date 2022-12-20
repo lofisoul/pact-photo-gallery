@@ -16,9 +16,6 @@ export default async function handler(
 
 	const parseObj = JSON.parse(fileContents);
 	const result = parseObj.data.results;
-	console.log(parseObj);
-	console.log(result);
-	console.log(req.query);
 
 	const gallery = result.filter(item =>
 		item.keyword.some(

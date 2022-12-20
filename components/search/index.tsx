@@ -12,7 +12,6 @@ export function SearchImage({expanded, toggle}) {
 	function submitHandler(e) {
 		e.preventDefault();
 		const searchTerms = searchTerm.split(/[ ,]+/);
-		console.log(searchTerms);
 		router.push({
 			pathname: '/results',
 			query: {
