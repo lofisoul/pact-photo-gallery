@@ -10,6 +10,8 @@ export default async function handler(req, res) {
 		'utf8',
 	);
 
+	console.log(fileContents);
+
 	const parseObj = JSON.parse(fileContents);
 	const imgData = parseObj.data.results;
 	//Return the content of the data file in json format
