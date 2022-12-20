@@ -21,7 +21,7 @@ export default function Album({ album }) {
 }
 
 export async function getStaticPaths() {
-  const data = await fetch(`${process.env.API_HOST}/api/filetree`);
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/filetree`);
   const albums = await data.json();
   const pathIDs = [];
 
@@ -48,7 +48,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(`${process.env.API_HOST}/api/album/${params.album}`);
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/album/${params.album}`);
   const album = await data.json();
 
   return {
