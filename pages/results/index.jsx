@@ -3,6 +3,7 @@ import {Gallery} from '../../components/gallery';
 import {useRouter} from 'next/router';
 import useSWR from 'swr';
 import {fetcher} from '../../utils/fetcher';
+import { Loader } from "../../components/loader";
 
 export default function Results() {
 	const router = useRouter();
@@ -13,8 +14,8 @@ export default function Results() {
 		fetcher,
 	);
 
-	if (!data) return 'Loading...';
-	if (error) return 'ERROR';
+	if (!data) return <Layout><div className="galleryMessage msgLg"><Loader /></div></Layout>;
+  if (error) return <Layout><div className="galleryMessage msgError">{`Whoops! Your request failed. (${error})`}</div></Layout>;
 
 	return (
 		<Layout>

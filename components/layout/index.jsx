@@ -5,13 +5,13 @@ import useSWR from 'swr';
 import {fetcher} from '../../utils/fetcher';
 import styles from './index.module.scss';
 import {FETCH_FILETREE} from '../../utils/swrKeys';
+import {Loader} from "../loader";
 
 export function Layout({children}) {
 	const {data, error} = useSWR(FETCH_FILETREE, fetcher);
 
-	if (error) return <div>ERROR</div>;
-
-	if (!data) return <div>Loading...</div>;
+	if (!data) return <div className="galleryMessage msgLg"><Loader /></div>;
+	if (error) return <div className="galleryMessage msgError">{`Whoops! Your request failed. (${error})`}</div>;
 	return (
 		<>
 			<Head>

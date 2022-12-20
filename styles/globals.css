@@ -53,3 +53,20 @@ ul {
 button {
   color: var(--deep-black);
 }
+
+.galleryMessage {
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%);
+}
+
+.msgLg {
+  font-size:5rem;
+  color:#435851;
+}
+
+.msgError {
+  font-size:2rem;
+  font-weight: 700;
+}
