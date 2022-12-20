@@ -1,15 +1,24 @@
 import {useState} from 'react';
+import {useRouter} from 'next/router';
 import SearchOutlined from '@ant-design/icons/SearchOutlined';
 import ArrowRightOutlined from '@ant-design/icons/ArrowRightOutlined';
 import cn from 'classnames';
 import styles from './index.module.scss';
 
 export function SearchImage({expanded, toggle}) {
+	const router = useRouter();
 	const [searchTerm, setSearchTerm] = useState('');
 
 	function submitHandler(e) {
 		e.preventDefault();
-		console.log(searchTerm);
+		const searchTerms = searchTerm.split(/[ ,]+/);
+		console.log(searchTerms);
+		router.push({
+			pathname: '/results',
+			query: {
+				searchTerms,
+			},
+		});
 	}
 
 	function inputHandler(e) {
