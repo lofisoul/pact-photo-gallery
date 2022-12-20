@@ -1,43 +1,42 @@
-import { useState } from "react";
-import { ListItem } from "./list-item";
-import MenuFoldOutlined from "@ant-design/icons/MenuFoldOutlined";
-import MenuUnfoldOutlined from "@ant-design/icons/MenuUnfoldOutlined";
-import cn from "classnames";
-import styles from "./index.module.scss";
+import {useState} from 'react';
+import {ListItem} from './list-item';
+import MenuFoldOutlined from '@ant-design/icons/MenuFoldOutlined';
+import MenuUnfoldOutlined from '@ant-design/icons/MenuUnfoldOutlined';
+import cn from 'classnames';
+import styles from './index.module.scss';
 
-function Trigger({ isOpen, toggle }) {
-  return (
-    <button onClick={toggle}>
-      {isOpen ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
-    </button>
-  );
+function Trigger({isOpen, toggle}) {
+	return (
+		<button onClick={toggle}>
+			{isOpen ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+		</button>
+	);
 }
 
-export function GalleryNav({ items, isHome }) {
-  const [isOpen, setIsOpen] = useState(false);
-  function toggleSideNav() {
-    setIsOpen(!isOpen);
-  }
-  return (
-    <nav className={cn(styles.galleryNav, { isOpen: isOpen })}>
-      <div className={styles.trigger}>
-        <Trigger isOpen={isOpen} toggle={toggleSideNav} />
-      </div>
-      <ul>
-        {items.map((item, idx) => {
-          const isAlbum = item[item.id].scheme === "album";
-          return (
-            <ListItem
-              item={item}
-              isAlbum={isAlbum}
-              key={item.id}
-              level={0}
-              isHome={isHome}
-              idx={idx}
-            />
-          );
-        })}
-      </ul>
-    </nav>
-  );
+export function GalleryNav({items}) {
+	const [isOpen, setIsOpen] = useState(false);
+	function toggleSideNav() {
+		setIsOpen(!isOpen);
+	}
+	return (
+		<nav className={cn(styles.galleryNav, {isOpen: isOpen})}>
+			<div className={styles.trigger}>
+				<Trigger isOpen={isOpen} toggle={toggleSideNav} />
+			</div>
+			<ul>
+				{items.map((item, idx) => {
+					const isAlbum = item[item.id].scheme === 'album';
+					return (
+						<ListItem
+							item={item}
+							isAlbum={isAlbum}
+							key={item.id}
+							level={0}
+							idx={idx}
+						/>
+					);
+				})}
+			</ul>
+		</nav>
+	);
 }
