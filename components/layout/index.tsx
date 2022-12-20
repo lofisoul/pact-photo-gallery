@@ -3,9 +3,10 @@ import Head from "next/head";
 import useSWR from "swr";
 import { fetcher } from "../../utils/fetcher";
 import styles from "./index.module.scss";
+import { FETCH_FILETREE } from "../../utils/swrKeys";
 
 export function Layout({ children, isHome }) {
-  const { data, error } = useSWR("/api/filetree", fetcher);
+  const { data, error } = useSWR(FETCH_FILETREE, fetcher);
 
   if (error) return <div>ERROR</div>;
 

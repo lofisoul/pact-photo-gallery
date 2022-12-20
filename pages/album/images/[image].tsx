@@ -13,7 +13,7 @@ export default function Image({ image }) {
 }
 
 export async function getStaticPaths() {
-  const data = await fetch("http://localhost:3000/api/contentobjects");
+  const data = await fetch(`${process.env.API_HOST}/api/contentobjects`);
   const images = await data.json();
 
   const paths = images.map((image) => {
@@ -32,7 +32,9 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const data = await fetch(`http://localhost:3000/api/images/${params.image}`);
+  const data = await fetch(
+    `${process.env.API_HOST}/api/images/${params.image}`
+  );
   const image = await data.json();
   console.log(image);
   return {
