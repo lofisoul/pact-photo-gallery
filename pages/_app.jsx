@@ -8,7 +8,7 @@ export default function App({ Component, pageProps, appProps }) {
     <>
       <style jsx global>{`
         html {
-          font-family: ${hanken.style.fontFamily};
+          font-family: ${hanken.style.fontFamily}, sans-serif;
         }
       `}</style>
       <Component {...pageProps} {...appProps} />
