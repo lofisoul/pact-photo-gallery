@@ -1,7 +1,9 @@
-import { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/router";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import cn from "classnames";
+import FolderOutlined from "@ant-design/icons/FolderOutlined";
+import FolderOpenOutlined from "@ant-design/icons/FolderOpenOutlined";
+import PictureOutlined from "@ant-design/icons/PictureOutlined";
 import styles from "./index.module.scss";
 
 export function ListItem({ item, isAlbum, level, isHome }) {
@@ -11,44 +13,6 @@ export function ListItem({ item, isAlbum, level, isHome }) {
 
   function toggleItem() {
     setActive(!active);
-  }
-
-  function toggleSubmenu() {
-    //🫠 not a great solution
-    // let originalParentHeight;
-    // if (
-    //   subMenuRef.current.classList.contains("level0") &&
-    //   subMenuRef.current.classList.contains("isOpen")
-    // ) {
-    //   originalParentHeight = subMenuRef.current.scrollHeight;
-    //   console.log(originalParentHeight);
-    // }
-    // if (
-    //   subMenuRef.current.parentNode.parentNode.classList.contains("level0") &&
-    //   !subMenuRef.current.parentNode.parentNode.classList.contains(
-    //     "subMenuOpen"
-    //   )
-    // ) {
-    //   subMenuRef.current.parentNode.parentNode.style.height =
-    //     subMenuRef.current.scrollHeight +
-    //     subMenuRef.current.parentNode.parentNode.scrollHeight +
-    //     "px";
-    //   subMenuRef.current.parentNode.parentNode.classList.add("subMenuOpen");
-    // }
-    // if (
-    //   subMenuRef.current.parentNode.parentNode.classList.contains(
-    //     "subMenuOpen"
-    //   ) &&
-    //   subMenuRef.current.classList.contains("isOpen")
-    // ) {
-    //   console.log(originalParentHeight);
-    //   setSubMenuHeight(0);
-    //   console.log(originalParentHeight);
-    //   subMenuRef.current.parentNode.parentNode.style.height =
-    //     originalParentHeight;
-    //   subMenuRef.current.parentNode.parentNode.classList.remove("subMenuOpen");
-    // }
-    //setSubMenuHeight(subMenuHeight === 0 ? subMenuRef.current.scrollHeight : 0);
   }
 
   const size = item[item.id].size;
@@ -78,15 +42,25 @@ export function ListItem({ item, isAlbum, level, isHome }) {
   }
 
   function renderButtonContent(active) {
-    return active ? `📂 ${item.name} (${size})` : `📁 ${item.name} (${size})`;
+    return active ? (
+      <>
+        <FolderOpenOutlined />
+        `${item.name} (${size})`
+      </>
+    ) : (
+      <>
+        <FolderOutlined />${item.name} (${size})`
+      </>
+    );
   }
 
   return (
     <li className={styles.navItem}>
       {isAlbum ? (
-        <Link
-          href={isHome ? `album/${item[item.id].id}` : item[item.id].id}
-        >{`🌄 ${item.name} (${size})`}</Link>
+        <Link href={isHome ? `album/${item[item.id].id}` : item[item.id].id}>
+          <PictureOutlined />
+          {`${item.name} (${size})`}
+        </Link>
       ) : (
         <button
           className={cn({ active: active }, { empty: size === "0" })}
