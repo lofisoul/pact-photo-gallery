@@ -18,7 +18,7 @@ export default function Results() {
 
 	return (
 		<Layout>
-			<Gallery data={data} />
+			<Gallery data={data} title={`Results based on: ${query.searchTerms}`} />
 		</Layout>
 	);
 }

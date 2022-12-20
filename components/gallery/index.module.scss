@@ -1,9 +1,12 @@
+.galleryWrap {
+    padding:20px;
+}
+
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-column-gap: 3px;
     grid-row-gap: 3px;
-    padding:20px;
     position: relative;
     z-index: 1;
 

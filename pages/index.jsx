@@ -12,7 +12,7 @@ export default function Home() {
 
 	return (
 		<Layout>
-			<Gallery data={data} />
+			<Gallery data={data} title={"Welcome!"} />
 		</Layout>
 	);
 }

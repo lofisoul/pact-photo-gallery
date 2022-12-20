@@ -12,10 +12,7 @@ export default function Album({ album }) {
 
   return (
     <Layout>
-      <section>
-        <h1>{album.name}</h1>
-        <Gallery data={data} />
-      </section>
+        <Gallery data={data} title={album.name} />
     </Layout>
   );
 }
