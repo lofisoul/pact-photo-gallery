@@ -26,8 +26,12 @@ body > div {
     align-items: flex-start;
     justify-content: center;
     width: 100%;
-    padding:20px;
+}
 
+@media screen and (min-width: 570px) {
+  body > div {
+    padding:20px;
+  }
 }
 
 body {

@@ -2,6 +2,7 @@ import {useState} from 'react';
 import Link from 'next/link';
 import {SearchImage} from '../search';
 import HomeFilled from '@ant-design/icons/HomeFilled';
+import cn from 'classnames';
 import styles from './index.module.scss';
 
 export function Header() {
@@ -11,7 +12,7 @@ export function Header() {
 	}
 	return (
 		<header className={styles.header}>
-			<div className={styles.home}>
+			<div className={cn(styles.home, {expanded: expanded})}>
 				<Link href="/">
 					<HomeFilled />
 				</Link>

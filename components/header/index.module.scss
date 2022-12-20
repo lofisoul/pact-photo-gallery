@@ -13,6 +13,9 @@
     .home {
         font-size: 2rem;
         display:flex;
+        position:relative;
+        width:230px;
+        overflow: hidden;
         
         h1 {
             margin: 0 10px 0;
@@ -20,6 +23,11 @@
             font-weight: 200;
             letter-spacing: .3px;
             font-size: 2.7rem;
+            position: absolute;
+            right: 0;
+            transition-duration: 0.15s;
+            transition-timing-function: cubic-bezier(0.75, -0.015, 0.565, 1.055);
+            z-index: 1;
         }
         a {
         width:50px;
@@ -27,6 +35,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        }
+
+        &[class*="expanded"] h1 {
+            opacity: 0;
+            transform: translateY(10px);
         }
     }
 }
