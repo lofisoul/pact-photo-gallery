@@ -45,11 +45,12 @@ export function ListItem({ item, isAlbum, level, isHome }) {
     return active ? (
       <>
         <FolderOpenOutlined />
-        `${item.name} (${size})`
+        {`${item.name} (${size})`}
       </>
     ) : (
       <>
-        <FolderOutlined />${item.name} (${size})`
+        <FolderOutlined />
+        {`${item.name} (${size})`}
       </>
     );
   }
