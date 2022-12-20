@@ -5,9 +5,7 @@ export default function Image({image}) {
 	console.log(image);
 	return (
 		<Layout>
-			<section>
-				<InfoImage image={image} />
-			</section>
+			<InfoImage image={image} />
 		</Layout>
 	);
 }
