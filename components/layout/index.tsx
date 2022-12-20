@@ -1,4 +1,5 @@
 import { GalleryNav } from "../gallery-nav";
+import { Header } from "../header";
 import Head from "next/head";
 import useSWR from "swr";
 import { fetcher } from "../../utils/fetcher";
@@ -21,7 +22,10 @@ export function Layout({ children, isHome }) {
       </Head>
       <main className={styles.main}>
         <GalleryNav items={data} isHome={isHome} />
-        {children}
+        <section className="content">
+          <Header />
+          {children}
+        </section>
       </main>
     </>
   );

@@ -1,10 +1,48 @@
 .galleryNav {
+    width: 50px;
+    border-right: 1px solid #ddd;
+    transition: .3s ease-in-out;
+    overflow: hidden;
+
+    .trigger {
+        height:50px;
+        display: flex;
+        border-bottom:1px solid #ddd;
+        justify-content: flex-end;
+
+        button {
+            width:50px;
+            height:50px;
+            background: none;
+            border:0;
+            font-size: 2rem;
+        }
+    }
+
+    &[class*="isOpen"] {
+        width:300px;
+
+        & > ul > li {
+            opacity: 1;
+            transform: translateX(0);
+            transition-delay: calc(0.05s * var(--delay));
+            }
+        }
 > ul {
         margin: 0;
-        padding:0;
+        padding:40px 15px;
+
+        > li {
+            opacity: 0;
+            transform: translateX(-20%);
+            transition-property: opacity, transform;
+            transition-duration: 0.15s;
+            transition-timing-function: cubic-bezier(0.750, -0.015, 0.565, 1.055);
+        }
     }
 }
 .navItem {
+    padding: 4px 0;
     button {
         background: none;
         border:0;
@@ -21,5 +59,9 @@
             transition: .5s;
             padding-left: 10px;
         }
+    }
+
+    svg {
+        margin-right: 7px
     }
 }

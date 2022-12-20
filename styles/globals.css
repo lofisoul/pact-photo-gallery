@@ -32,8 +32,7 @@ body > div {
 
 body {
   color: var(--body-color);
-  background: rgb(218,234,221);
-background: linear-gradient(210deg, rgba(218,234,221,1) 0%, rgba(161,190,175,1) 100%);
+  background: #D9DCCC;
     font-size: 1.5rem;
     margin:0;
 }

@@ -1,11 +1,30 @@
+import { useState } from "react";
 import { ListItem } from "./list-item";
+import MenuFoldOutlined from "@ant-design/icons/MenuFoldOutlined";
+import MenuUnfoldOutlined from "@ant-design/icons/MenuUnfoldOutlined";
+import cn from "classnames";
 import styles from "./index.module.scss";
 
-export function GalleryNav({ items, isHome }) {
+function Trigger({ isOpen, toggle }) {
   return (
-    <nav className={styles.galleryNav}>
+    <button onClick={toggle}>
+      {isOpen ? <MenuFoldOutlined /> : <MenuUnfoldOutlined />}
+    </button>
+  );
+}
+
+export function GalleryNav({ items, isHome }) {
+  const [isOpen, setIsOpen] = useState(false);
+  function toggleSideNav() {
+    setIsOpen(!isOpen);
+  }
+  return (
+    <nav className={cn(styles.galleryNav, { isOpen: isOpen })}>
+      <div className={styles.trigger}>
+        <Trigger isOpen={isOpen} toggle={toggleSideNav} />
+      </div>
       <ul>
-        {items.map((item) => {
+        {items.map((item, idx) => {
           const isAlbum = item[item.id].scheme === "album";
           return (
             <ListItem
@@ -14,6 +33,7 @@ export function GalleryNav({ items, isHome }) {
               key={item.id}
               level={0}
               isHome={isHome}
+              idx={idx}
             />
           );
         })}

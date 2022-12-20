@@ -1,19 +1,16 @@
 .main {
-    background: rgba(254, 254, 254,  .9);
-    padding: 10px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, .2);
+    background: #fff;
+    box-shadow: 2px 2px 3px rgb(0 0 0 / 20%);
     width: 95%;
     border-radius: 5px;
-
-    @media screen and (min-width: 570px) {
+    height: 90vh;
         display: flex;
 
-        > nav {
-            width: 20%
-        }
-
         > section {
-            width: 80%;
-        }
+width: 100%;
+    background: rgb(218, 234, 221);
+    background: linear-gradient(210deg, rgb(218, 234, 221) 0%, rgb(161, 190, 175) 100%);
+    overflow: auto;
+    position: relative;
     }
 }

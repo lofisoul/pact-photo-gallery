@@ -3,6 +3,9 @@
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-column-gap: 3px;
     grid-row-gap: 3px;
+    padding:20px;
+    position: relative;
+    z-index: 1;
 
     .imageItem {
         aspect-ratio: 1/1;

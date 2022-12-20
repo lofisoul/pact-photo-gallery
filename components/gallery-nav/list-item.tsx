@@ -6,7 +6,7 @@ import FolderOpenOutlined from "@ant-design/icons/FolderOpenOutlined";
 import PictureOutlined from "@ant-design/icons/PictureOutlined";
 import styles from "./index.module.scss";
 
-export function ListItem({ item, isAlbum, level, isHome }) {
+export function ListItem({ item, isAlbum, level, isHome, idx }) {
   const [active, setActive] = useState(false);
   const [subMenuHeight, setSubMenuHeight] = useState("auto");
   const subMenuRef = useRef(null);
@@ -56,7 +56,7 @@ export function ListItem({ item, isAlbum, level, isHome }) {
   }
 
   return (
-    <li className={styles.navItem}>
+    <li className={styles.navItem} style={{ "--delay": idx }}>
       {isAlbum ? (
         <Link href={isHome ? `album/${item[item.id].id}` : item[item.id].id}>
           <PictureOutlined />
