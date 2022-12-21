@@ -54,6 +54,10 @@ export function ListItem({item, isAlbum, level, idx}) {
 		);
 	}
 
+	if(isAlbum && size === '0') {
+		return
+	}
+
 	return (
 		<li className={styles.navItem} style={{'--delay': idx}}>
 			{isAlbum ? (

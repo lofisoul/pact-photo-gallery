@@ -9,8 +9,14 @@
         display: flex;
         border-bottom:1px solid #ddd;
         justify-content: flex-end;
+        position: sticky;
+        top: 0;
+        background: white;
+        z-index: 2;
+        border-top-left-radius: 5px;
 
         button {
+            cursor: pointer;
             width:50px;
             height:50px;
             background: none;
@@ -21,6 +27,7 @@
 
     &[class*="isOpen"] {
         width:300px;
+        overflow: auto;
 
         & > ul > li {
             opacity: 1;
