@@ -7,7 +7,7 @@ export function Gallery({data, title}) {
 		<h1>{title}</h1>
 		<section className={styles.gallery}>
 			{data.length === 0
-				? `No images`
+				? `We couldn't find any images for that album.`
 				: data.map(image => (
 						<div className={styles.imageItem} key={image.id}>
 							<a href={`/images/${image.id}`} key={image.id}>
