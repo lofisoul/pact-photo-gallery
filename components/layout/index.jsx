@@ -1,3 +1,4 @@
+import {useState} from 'react';
 import {GalleryNav} from '../gallery-nav';
 import {Header} from '../header';
 import Head from 'next/head';
@@ -8,6 +9,12 @@ import {FETCH_FILETREE} from '../../utils/swrKeys';
 import {Loader} from "../loader";
 
 export function Layout({children}) {
+	const [isNavOpen, setNavIsOpen] = useState(false);
+	
+	function toggleSideNav() {
+		setNavIsOpen(!isNavOpen);
+	}
+
 	const {data, error} = useSWR(FETCH_FILETREE, fetcher);
 
 	if (!data) return <div className="galleryMessage msgLg"><Loader /></div>;
@@ -21,9 +28,9 @@ export function Layout({children}) {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<main className={styles.main}>
-				<GalleryNav items={data} />
+				<GalleryNav items={data} isOpen={isNavOpen} toggle={toggleSideNav} />
 				<section className="content">
-					<Header />
+					<Header isNavOpen={isNavOpen} />
 					{children}
 				</section>
 			</main>

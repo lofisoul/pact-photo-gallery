@@ -5,7 +5,7 @@ import HomeFilled from '@ant-design/icons/HomeFilled';
 import cn from 'classnames';
 import styles from './index.module.scss';
 
-export function Header() {
+export function Header({isNavOpen}) {
 	const [expanded, setExpanded] = useState(false);
 	function toggleSearch() {
 		setExpanded(!expanded);
@@ -16,7 +16,7 @@ export function Header() {
 				<Link href="/">
 					<HomeFilled />
 				</Link>
-				<h1>Photo Gallery</h1>
+				<h1 className={cn({[styles.isNavOpen]: isNavOpen})}>Photo Gallery</h1>
 			</div>
 			<SearchImage expanded={expanded} toggle={toggleSearch} />
 		</header>

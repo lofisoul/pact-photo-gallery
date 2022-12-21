@@ -1,4 +1,3 @@
-import {useState} from 'react';
 import {ListItem} from './list-item';
 import MenuFoldOutlined from '@ant-design/icons/MenuFoldOutlined';
 import MenuUnfoldOutlined from '@ant-design/icons/MenuUnfoldOutlined';
@@ -13,15 +12,11 @@ function Trigger({isOpen, toggle}) {
 	);
 }
 
-export function GalleryNav({items}) {
-	const [isOpen, setIsOpen] = useState(false);
-	function toggleSideNav() {
-		setIsOpen(!isOpen);
-	}
+export function GalleryNav({items, isOpen, toggle}) {
 	return (
 		<nav className={cn(styles.galleryNav, {isOpen: isOpen})}>
 			<div className={styles.trigger}>
-				<Trigger isOpen={isOpen} toggle={toggleSideNav} />
+				<Trigger isOpen={isOpen} toggle={toggle} />
 			</div>
 			<ul>
 				{items.map((item, idx) => {
