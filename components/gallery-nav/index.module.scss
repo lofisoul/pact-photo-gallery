@@ -26,7 +26,7 @@
             align-items: center;
             justify-content: center;
 
-            .anticon svg {
+            [class*="anticon"] svg {
                 display: block;
             }
         }
