@@ -25,6 +25,10 @@
             display:flex;
             align-items: center;
             justify-content: center;
+
+            .anticon svg {
+                display: block;
+            }
         }
     }
 
