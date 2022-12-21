@@ -2,7 +2,6 @@ import {Layout} from '../../components/layout';
 import {InfoImage} from '../../components/info-image';
 
 export default function Image({image}) {
-	console.log(image);
 	return (
 		<Layout>
 			<InfoImage image={image} />
@@ -11,10 +10,12 @@ export default function Image({image}) {
 }
 
 export async function getStaticPaths() {
-	const data = await fetch(`${process.env.NEXT_PUBLIC_API_HOST}/api/contentobjects`);
-	const images = await data.json();
+	const data = await import('../../json/ContentObjects.json');
+	const json = JSON.stringify(data);
+	const parseObj = JSON.parse(json);
+	const imgData = parseObj.data.results;
 
-	const paths = images.map(image => {
+	const paths = imgData.map(image => {
 		return {
 			params: {
 				image: image.id.toString(),
@@ -29,11 +30,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-	const data = await fetch(
-		`${process.env.NEXT_PUBLIC_API_HOST}/api/images/${params.image}`,
-	);
-	const image = await data.json();
-
+	const data = await import('../../json/ContentObjects.json');
+	const json = JSON.stringify(data);
+	const parseObj = JSON.parse(json);
+	const result = parseObj.data.results;
+	const image = result.find(img => img.id === params.image);
 	return {
 		props: {image},
 	};
